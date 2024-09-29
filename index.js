@@ -6,10 +6,13 @@ const userrouter=require('./router/route');
 const DB =require('./Dbconnection/DBConnection');
 const cors = require('cors');
 const dotenv=require('dotenv');
+
 app.use(cors());
 dotenv.config();
+
 //connecting frontend
-app.use(express.static(path.join(__dirname,'./frontend/build')))
+app.use(express.static(path.join(__dirname,'./frontend/build')));
+
 app.get('*',(req,resp)=>{
     console.log("wokring");
     resp.sendFile(
@@ -19,11 +22,12 @@ app.get('*',(req,resp)=>{
         }    
     )
 });
+
 //connection to mongo
 DB();
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 app.use('/user',userrouter);
-app.listen(PORT,()=>{
+app.listen(process.env.PORT,()=>{
     console.log("The server is running on Port:"+PORT);
 });
