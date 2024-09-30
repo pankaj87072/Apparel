@@ -1,12 +1,12 @@
 const express=require('express');
 const app=express();
-const PORT=process.env.PORT||6060;
+
 const path=require('node:path');
 const userrouter=require('./router/route');
 const DB =require('./Dbconnection/DBConnection');
 const cors = require('cors');
 const dotenv=require('dotenv');
-
+const PORT=process.env.PORT||6060;
 app.use(cors());
 dotenv.config();
 
