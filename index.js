@@ -1,6 +1,6 @@
 const express=require('express');
 const app=express();
-const PORT=6060;
+const PORT=process.env.PORT||6060;
 const path=require('node:path');
 const userrouter=require('./router/route');
 const DB =require('./Dbconnection/DBConnection');
@@ -28,6 +28,6 @@ DB();
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 app.use('/user',userrouter);
-app.listen(process.env.PORT,()=>{
+app.listen(PORT,()=>{
     console.log("The server is running on Port:"+PORT);
 });
