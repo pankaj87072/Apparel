@@ -1,18 +1,17 @@
 const express=require('express');
 const app=express();
-
 const path=require('node:path');
 const userrouter=require('./router/route');
 const DB =require('./Dbconnection/DBConnection');
 const cors = require('cors');
 const dotenv=require('dotenv');
+dotenv.config();
 const PORT=process.env.PORT||6060;
 app.use(cors());
-dotenv.config();
+
 
 //connecting frontend
 app.use(express.static(path.join(__dirname,'./frontend/build')));
-
 app.get('*',(req,resp)=>{
     console.log("wokring");
     resp.sendFile(
