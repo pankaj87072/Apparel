@@ -1,6 +1,8 @@
-# Apparel Recycling MVP
+# Apparel Recycling MVP  
+ **Approach**
+ 
+This is an MVP (Minimum Viable Product) platform that allows users to submit information about their unused or worn-out apparel for proper disposal, donation, or recycling. I developed both the backend and frontend, with the frontend served from the backend in a monorepo structure. I created the frontend with React using Tailwind for a better and simpler user experience. I implemented a login and signup page through which users can enter their details and access the platform. Additionally, I created a homepage named ApparelRecyclingMVP, which is a basic frontend form where users can enter the details of their unused or worn-out products and submit that information. I integrated MongoDB to ensure that user data and item details can be stored easily, and I deployed the entire project on Render.
 
-This is an MVP (Minimum Viable Product) platform that allows users to submit information about their unused or worn-out apparel for proper disposal, donation, or recycling. It is developed as part of a challenge and includes both a backend and frontend, with the frontend served from the backend in a monorepo structure.
 
 ## Technologies Used
 The application is built using the following technologies:
